@@ -1,4 +1,5 @@
 # Project Title
+ASOMAR
 
 ## Description
 This project is an implementaion of ASOMAR, a deep learning model to predict high efficiency ASO for RNA degradation.
