@@ -15,6 +15,7 @@ Ensure you have the following versions installed:
 - keras==3.6.0
 - matplotlib==3.9.2
 - numpy==2.0.0
+- Bio==1.7.1
 
 You can install the required packages using the following command:
 

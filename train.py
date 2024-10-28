@@ -8,6 +8,7 @@ from models import ASOdeep
 from data import DataReader, NoneSeqFeatureProcessor
 import numpy as np
 from sklearn.metrics import roc_curve, auc, precision_recall_curve, r2_score
+import argparse
 
 
 # compute AUC-ROC
@@ -159,7 +160,7 @@ def main():
                             validation_data=([valAttrX, valX], val_label),
                             batch_size=64, epochs=500, verbose=0, callbacks=early_stop)
 
-    # ens_model.save("C:/Users/yagao/Documents/ASO/data/EZH2.keras")
+    ens_model.save("ASOmodel.keras")
 
     preds = ens_model.predict([testAttrX, testX])
     # plot_history(history)
@@ -189,8 +190,7 @@ def main():
 
     # Write DataFrames to CSV files
     # roc_df.to_csv('ASO_roc_values.csv', index=False)
-    pr_df.to_csv('C:/Users/yagao/Documents/ASO/data/ASO_pr_values.csv', index=False)
-    pred_df.to_csv('C:/Users/yagao/Documents/ASO/data/a.csv', index=False)
+    pr_df.to_csv('ASO_pr_values.csv', index=False)
 
 if __name__ == "__main__":
     main()

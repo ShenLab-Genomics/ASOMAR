@@ -96,7 +96,7 @@ class NoneSeqFeatureProcessor:
         else:
             trainX_category = testX_category = np.array([])
 
-        joblib.dump([self.cs, self.le], 'C:/Users/yagao/Documents/ASO/data/ASOscalers.joblib')
+        joblib.dump([self.cs, self.le], 'ASOscalers.joblib')
         if self.plain:
             if len(self.plain) != 1 :
                 train_plain = train[self.plain].values
@@ -154,6 +154,6 @@ class SingleFeatureProcessor:
         else:
             raise ValueError("Invalid feature type. Choose from 'continuous', 'category', or 'plain'.")
 
-        joblib.dump([self.cs, self.le], 'C:/Users/yagao/Documents/ASO/data/ASOscalers.joblib')
+        joblib.dump([self.cs, self.le], 'ASOscalers.joblib')
 
         return (trainX, testX)
