@@ -12,9 +12,9 @@ Ensure you have the following versions installed:
 - pandas==2.2.3
 - tensorflow==2.18.0
 - scikit-learn==1.5.2
-- keras==2.9.0
+- keras==3.6.0
 - matplotlib==3.6.2
-- numpy==1.24.3
+- numpy==2.0.0
 
 You can install the required packages using the following command:
 
