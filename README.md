@@ -24,6 +24,6 @@ pip install -r requirements.txt
 To train the model using the following command:
 
 ```bash
-python your_script.py "C:/Users/yagao/Documents/ASO/data/train.csv"
+python train.py train.csv
 ```
 
