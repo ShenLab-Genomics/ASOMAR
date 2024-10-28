@@ -88,7 +88,10 @@ def plot_history(history):
 
 
 def main():
-    input_data = DataReader("C:/Users/yagao/Documents/ASO/data/train.csv")
+    parser = argparse.ArgumentParser(description="Read data from a CSV file.")
+    parser.add_argument('file_path', type=str, help='Path to the CSV file.')
+    args = parser.parse_args()
+    input_data = DataReader(args.file_path)
     (df, seqs, labels, efficacy) = input_data.load_train_set(encoding='one_hot', max_length=20)
 
     # gene_list = df['TargetGene'].value_counts().index
